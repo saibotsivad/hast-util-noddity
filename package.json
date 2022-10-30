@@ -1,0 +1,46 @@
+{
+  "name": "hast-util-noddity",
+  "version": "0.0.0",
+  "description": "Hadt extension to parse noddity flavored text within HTML.",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "uvu src '.test.js$'",
+    "lint": "eslint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saibotsivad/hast-util-noddity.git"
+  },
+  "keywords": [
+    "unist",
+    "micromatch",
+    "micromark-extension",
+    "mdast",
+    "mdast-util",
+    "util",
+    "utility",
+    "markdown",
+    "markup",
+    "html",
+    "noddity",
+    "parse",
+    "syntax",
+    "tree",
+    "ast"
+  ],
+  "author": {
+    "name": "Tobias Davis",
+    "email": "tobias@davistobias.com",
+    "url": "https://davistobias.com"
+  },
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/saibotsivad/hast-util-noddity/issues"
+  },
+  "homepage": "https://github.com/saibotsivad/hast-util-noddity",
+  "devDependencies": {
+    "@saibotsivad/eslint-config-saibotsivad": "*",
+    "uvu": "^0.5.6"
+  }
+}
