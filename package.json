@@ -1,7 +1,7 @@
 {
   "name": "hast-util-noddity",
   "version": "0.0.0",
-  "description": "Hadt extension to parse noddity flavored text within HTML.",
+  "description": "Hast extension to parse noddity flavored text within HTML.",
   "type": "module",
   "main": "src/index.js",
   "scripts": {
@@ -22,6 +22,7 @@
     "utility",
     "markdown",
     "markup",
+    "hast",
     "html",
     "noddity",
     "parse",
@@ -41,6 +42,10 @@
   "homepage": "https://github.com/saibotsivad/hast-util-noddity",
   "devDependencies": {
     "@saibotsivad/eslint-config-saibotsivad": "*",
+    "hast-util-from-html": "^1.0.0",
+    "hastscript": "^7.1.0",
+    "mdast-util-from-markdown": "^1.2.0",
+    "mdast-util-to-hast": "^12.2.4",
     "uvu": "^0.5.6"
   }
 }
