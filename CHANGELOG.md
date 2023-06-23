@@ -23,7 +23,9 @@ Change categories are:
 ### Removed
 ### Security
 
-<!-- https://github.com/saibotsivad/hast-util-noddity/compare/v0.0.0...v1.0.0 -->
+## [0.0.1](https://github.com/saibotsivad/hast-util-noddity/compare/v0.0.0...v0.0.1) - 2023-06-22
+### Fixed
+- Was missing the recursion call for deeper HTML elements.
 
 ## [0.0.0](https://github.com/saibotsivad/hast-util-noddity/tree/v0.0.0) - 2022-10-29
 ### Added

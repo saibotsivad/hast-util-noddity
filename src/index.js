@@ -121,7 +121,7 @@ const recursivelyProcess = async ({ node, tagsToExclude, urlRenderer, templateRe
 		for (const child of node.children) {
 			const matched = child.type === 'text' && child.value?.length && [ ...child.value.matchAll(NODDITY_TEMPLATE_REGEX) ]
 			if (matched?.length) templatedChildren.push(...(await parseNoddityTemplate({ node: child, matched, templateRenderer })))
-			else templatedChildren.push(child)
+			else templatedChildren.push(await recursivelyProcess({ node: child, tagsToExclude, urlRenderer, templateRenderer }))
 		}
 
 		// First we split across the link delimiters, e.g. `[[` and `]]`, but keep

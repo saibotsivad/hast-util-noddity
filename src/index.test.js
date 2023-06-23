@@ -77,6 +77,46 @@ test('basic link parsing with text', async () => {
 	)
 })
 
+test('link parsing of deep html', async () => {
+	const tree = await hastUtilNoddity(htmlToHast('<ul><li>[[file1.md|links]]</li></ul>'), { urlRenderer })
+	recurseClear(tree)
+	assert.equal(
+		tree,
+		{
+			type: 'root',
+			children: [
+				{
+					type: 'element',
+					tagName: 'ul',
+					properties: {},
+					children: [
+						{
+							type: 'element',
+							tagName: 'li',
+							properties: {},
+							children: [
+								{
+									type: 'element',
+									tagName: 'a',
+									properties: {
+										href: 'https://site.com/file1.md',
+									},
+									children: [
+										{
+											type: 'text',
+											value: 'links',
+										},
+									],
+								},
+							],
+						},
+					],
+				},
+			],
+		},
+	)
+})
+
 test('link parsing with hash fragments', async () => {
 	const tree = await hastUtilNoddity(htmlToHast('Links [[file.md#heading|internal]] are neat'), { urlRenderer })
 	recurseClear(tree)
