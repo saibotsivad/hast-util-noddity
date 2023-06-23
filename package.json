@@ -1,6 +1,6 @@
 {
   "name": "hast-util-noddity",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Hast extension to parse noddity flavored text within HTML.",
   "type": "module",
   "main": "src/index.js",
